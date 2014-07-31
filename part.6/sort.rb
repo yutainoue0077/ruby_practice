@@ -1,17 +1,18 @@
-class Beer
+class Sort
 
-  def sing(beer_count)
-    while beer_count > 0
-      puts "#{beer_count} Bottles of beer on the wall"
-      puts "#{beer_count} Bottles of beer"
-      beer_count = beer_count - 1
-      puts "Take one down and pass it around"
-      puts "#{beer_count} Bottles of beer on the wall"
-      puts ""
-    end
+  def tango
+    list = []
+    puts "好きな英単語を好きなだけ入力してください。"
+    puts "気が済んだら\"end\"で終わりましょう。"
+    begin
+      list << gets.chomp.to_s
+    end  until list[-1] == "end"
+    list.delete("end")
+    puts "名前順に並べ替えました。"
+    p list.sort{|a, b| a.upcase <=> b.upcase }
   end
 
 end
 
-beer = Beer.new
-beer.sing(99)
+sort = Sort.new
+sort.tango
