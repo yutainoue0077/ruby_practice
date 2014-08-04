@@ -37,5 +37,4 @@ until (s_year != 0) && (e_year != 0) && (s_year < e_year)
   e_year = gets.chomp.to_i
   uruu.check(s_year, e_year)
 end
-
 uruu.toshi(s_year, e_year)

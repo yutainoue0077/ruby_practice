@@ -25,7 +25,6 @@ class Gramma
 end
 
 gramma = Gramma.new
-
 puts "Hay, gramma!"
 say = gets.chomp.to_s
 gramma.answer(say)
