@@ -1,17 +1,18 @@
 def clock
   time = Time.now.hour
-  time.times{ |i|
-  yield i
-  }
+  time -= 12 if time > 12
+  time = 12 if time == 0
+  time.times do
+    yield
+  end
 end
 
-
-clock do |time|
-  puts "#{time + 1}時だ、ごーん。"
+clock do
+  puts 'ごーん。'
 end
 
-i = 1
+i = 0
 clock do
   i += 1
 end
-puts "#{i}時をお知らせしました。"
+puts "響いた回数：#{i}回"

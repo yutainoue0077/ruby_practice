@@ -1,9 +1,7 @@
 class Boss
-
   def answer(hope)
     puts "なにぃ？\"" + hope + "\"だとー！！おまえは首だ！！"
   end
-
 end
 
 hope = Boss.new
