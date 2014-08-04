@@ -16,16 +16,16 @@ def englishNumber number
   write = left/100
   left  = left - write*100
 
-  if write > 9999999
-    write2 = write/10000000
-    write = write - write2*10000000
+  if write > 9_999_999
+    write2 = write/10_000_000
+    write = write - write2*10_000_000
     billion = englishNumber write2
     numString = numString + billion + " billion "
   end
 
-  if write > 9999
-    write2 = write/10000
-    write = write - write2*10000
+  if write > 9_999
+    write2 = write/10_000
+    write = write - write2*10_000
     million = englishNumber write2
     numString = numString + million + " million "
   end
@@ -84,10 +84,10 @@ puts englishNumber(100)
 puts englishNumber(101)
 puts englishNumber(234)
 puts englishNumber(3211)
-puts englishNumber(99999)
-puts englishNumber(1000000000)
-puts englishNumber(999999)
-puts englishNumber(9999999)
-puts englishNumber(99999999)
-puts englishNumber(999999999)
-puts englishNumber(9999999999)
+puts englishNumber(99_999)
+puts englishNumber(1_000_000_000)
+puts englishNumber(999_999)
+puts englishNumber(9_999_999)
+puts englishNumber(99_999_999)
+puts englishNumber(999_999_999)
+puts englishNumber(9_999_999_999)

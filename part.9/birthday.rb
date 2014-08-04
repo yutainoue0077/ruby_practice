@@ -1,22 +1,16 @@
 class Birthday
 
   def howmany (year, month, day)
-    p year
-    p month
-    p day
+    one_year = Time.mktime(1)
     b_time = Time.mktime(year, month, day)
     n_time = Time.new
-    one_year = Time.mktime(1)
     live_times = n_time - b_time
-    old = live_times / 60 / 60 / 24 / 365
-    puts "あなたの年齢は#{old.to_i}ですね？"
-    p one_year
-
-    old.to_i.times{ |i|
+    old = live_times.to_i / 60 / 60 / 24 / 365
+    old.times{ |i|
       b_time = Time.mktime(year + i + 1, month, day)
       puts "#{i + 1}才の誕生日おめ！#{b_time}"
     }
-
+    puts "あなたの年齢は#{old.to_i}ですね？"
   end
 
 end

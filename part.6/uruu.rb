@@ -13,13 +13,12 @@ class Uruu
     puts "コチラがうるう年の一覧になります。"
     years.times{|i|
       i = i + s_year
-      if (i % 4 == 0) and (i % 100 != 0) and (i != 0)
+      if (i % 4 == 0) && (i % 100 != 0) && (i != 0)
         puts i
         count += 1
       elsif i % 400 == 0
         puts i
         count += 1
-      else
       end
     }
     puts "合計#{count}うるう年"
@@ -31,12 +30,12 @@ uruu = Uruu.new
 s_year = 0
 e_year = 0
 
-until (s_year != 0) and (e_year != 0) and (s_year < e_year)
-puts "何年から？"
-s_year = gets.chomp.to_i
-puts "何年まで？？"
-e_year = gets.chomp.to_i
-uruu.check(s_year, e_year)
+until (s_year != 0) && (e_year != 0) && (s_year < e_year)
+  puts "何年から？"
+  s_year = gets.chomp.to_i
+  puts "何年まで？？"
+  e_year = gets.chomp.to_i
+  uruu.check(s_year, e_year)
 end
 
 uruu.toshi(s_year, e_year)

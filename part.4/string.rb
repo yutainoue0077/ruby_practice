@@ -5,7 +5,7 @@ class Get_str
   end
 
   def g_number(num)
-    if num != 0
+    unless num == 0
       n = num + 1
       puts "そこは#{n}にしておきましょう。"
     else

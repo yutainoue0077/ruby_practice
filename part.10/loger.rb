@@ -4,10 +4,9 @@ class Loger
   def log block_name, &utigawa
     indent = " "
     @@i += 1
-    puts "#{indent * @@i}\"#{block_name}\"を開始..."
-
+    puts "#{indent * (@@i - 1)}\"#{block_name}\"を開始..."
     modorichi = utigawa.call
-    puts "#{indent * @@i}...\"#{block_name}\"が終了して、戻り値は\"#{modorichi}\""
+    puts "#{indent * (@@i - 1)}...\"#{block_name}\"が終了して、戻り値は\"#{modorichi}\""
     @@i -= 1
   end
 

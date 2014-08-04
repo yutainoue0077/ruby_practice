@@ -68,13 +68,13 @@ doragon = Doragon.new
     puts "コマンド： naderu asobu sanpo esa"
     word = gets.chomp.to_s
     case word
-    when "naderu" then
+    when "naderu"
       doragon.naderu
-    when "asobu" then
+    when "asobu"
       doragon.asobu
-    when "sanpo" then
+    when "sanpo"
       doragon.sanpo
-    when "esa" then
+    when "esa"
       doragon.esa
     else
       puts "それはちょっと。。。"

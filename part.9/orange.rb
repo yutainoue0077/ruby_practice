@@ -48,11 +48,11 @@ old = 0
     puts "コマンド： status grow pich"
     word = gets.chomp.to_s
     case word
-    when "status" then
+    when "status"
       orange.status
-    when "grow" then
+    when "grow"
       old = orange.grow
-    when "pich" then
+    when "pich"
       orange.pich
     else
       puts "それはちょっと。。。"
