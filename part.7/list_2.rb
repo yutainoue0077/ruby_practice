@@ -20,7 +20,7 @@ class Mokuzi
     list
   end
 
-  def maping (list)
+  def maping(list)
     left_w = 40
     right_w = 30
     center_w = 30

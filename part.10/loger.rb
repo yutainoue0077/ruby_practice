@@ -1,7 +1,7 @@
 class Loger
 @@i = 0
 
-  def log block_name, &utigawa
+  def log(block_name, &utigawa)
     indent = " "
     @@i += 1
     puts "#{indent * (@@i - 1)}\"#{block_name}\"を開始..."
@@ -15,7 +15,6 @@ end
 loger = Loger.new
 i = 0
 
-
 loger.log "外側のブロック" do
   loger.log "内側のブロック" do
     loger.log "もっと内側のブロック" do
@@ -24,7 +23,7 @@ loger.log "外側のブロック" do
     i = 4 + 6
   end
   loger.log "内側のお隣ブロック" do
-    i = i + 5
+    i += 5
   end
-  i = i * i
+  i *= i
 end

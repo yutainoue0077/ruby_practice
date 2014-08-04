@@ -1,4 +1,4 @@
-def englishNumber number
+def english_number(number)
     return '負でない数を入力してください.'  if number < 0
     return 'zero' if number == 0
 
@@ -51,7 +51,7 @@ def englishNumber number
   left  = left - write*10
 
   if write > 0
-    if ((write == 1) and (left > 0))
+    if (write == 1) && (left > 0)
       numString = numString + teenagers[left-1]
       left = 0
     else
@@ -72,22 +72,22 @@ def englishNumber number
   numString
 end
 
-puts englishNumber(2)
-puts englishNumber(  9)
-puts englishNumber( 10)
-puts englishNumber( 11)
-puts englishNumber( 17)
-puts englishNumber( 32)
-puts englishNumber( 88)
-puts englishNumber( 99)
-puts englishNumber(100)
-puts englishNumber(101)
-puts englishNumber(234)
-puts englishNumber(3211)
-puts englishNumber(99_999)
-puts englishNumber(1_000_000_000)
-puts englishNumber(999_999)
-puts englishNumber(9_999_999)
-puts englishNumber(99_999_999)
-puts englishNumber(999_999_999)
-puts englishNumber(9_999_999_999)
+puts english_number(2)
+puts english_number(  9)
+puts english_number( 10)
+puts english_number( 11)
+puts english_number( 17)
+puts english_number( 32)
+puts english_number( 88)
+puts english_number( 99)
+puts english_number(100)
+puts english_number(101)
+puts english_number(234)
+puts english_number(3_211)
+puts english_number(99_999)
+puts english_number(1_000_000_000)
+puts english_number(999_999)
+puts english_number(9_999_999)
+puts english_number(99_999_999)
+puts english_number(999_999_999)
+puts english_number(9_999_999_999)

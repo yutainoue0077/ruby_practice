@@ -1,6 +1,6 @@
 class Sort
 
-  def nyuryoku
+  def input
     list = []
     puts "好きな英単語を好きなだけ入力してください。"
     puts "気が済んだら\"end\"で終わりましょう。"
@@ -13,7 +13,7 @@ class Sort
     return list
   end
 
-  def hikaku(list)
+  def compare(list)
     s_list = []
     list_n = 0
       begin
@@ -34,5 +34,5 @@ class Sort
 end
 
 sort = Sort.new
-list = sort.nyuryoku
-sort.hikaku(list)
+list = sort.input
+sort.compare(list)

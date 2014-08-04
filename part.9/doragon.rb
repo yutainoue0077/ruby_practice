@@ -21,7 +21,7 @@ class Doragon
     puts "マリパをやった。"
     puts "おもいっきり手を痛めた。"
     @dor_iraira += 7
-    @dor_hp = @dor_hp -3
+    @dor_hp -= 3
     return @dor_iraira
   end
 
@@ -29,8 +29,8 @@ class Doragon
     puts "勝手に先に走り去ってしまった。"
     puts "~3時間後~"
     puts "やっと捕まえた…！"
-    @dor_iraira = @dor_iraira - 10
-    @dor_hp = @dor_hp - 5
+    @dor_iraira -= 10
+    @dor_hp -= 5
   end
 
   def esa
@@ -63,7 +63,6 @@ class Doragon
 end
 
 doragon = Doragon.new
-
   loop{
     puts "コマンド： naderu asobu sanpo esa"
     word = gets.chomp.to_s

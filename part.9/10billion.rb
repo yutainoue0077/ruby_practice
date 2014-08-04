@@ -1,8 +1,8 @@
 class Billion
 
-  def birthday (year, month, day, hour, min, sec)
+  def birthday(year, month, day, hour, min, sec)
     b_time = Time.mktime(year, month, day, hour, min, sec)
-    b_time += 1000000000
+    b_time += 1_000_000_000
     puts "あなたは#{b_time}に生誕10億秒を迎えます。"
   end
 
