@@ -33,7 +33,7 @@ def englishNumber number
     numString = numString + " and " if left > 0
   end
 
-  if write > 99
+  if write > 9
     write2 = write/10
     write = write - write2*10
     thousand = englishNumber write2
@@ -42,9 +42,11 @@ def englishNumber number
   end
 
   if write > 0
-    hundreds  = englishNumber write
+    write2 = write
+    write = 0
+    hundreds  = englishNumber write2
     numString = numString + hundreds + " hundred"
-    numString = numString + " and " if left > 0
+    numString = numString + " and" if left > 0
      if left > 0
       numString = numString + " "
     end
@@ -90,3 +92,4 @@ puts englishNumber(234)
 puts englishNumber(3211)
 puts englishNumber(99999999)
 puts englishNumber(1000000000)
+puts englishNumber(99999999999)

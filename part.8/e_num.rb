@@ -19,29 +19,31 @@ def englishNumber number
   if write > 9999999
     write2 = write/10000000
     write = write - write2*10000000
-    thousand = englishNumber write2
-    numString = numString + thousand + " billion"
+    billion = englishNumber write2
+    numString = numString + billion + " billion "
   end
 
   if write > 9999
     write2 = write/10000
     write = write - write2*10000
-    thousand = englishNumber write2
-    numString = numString + thousand + " million"
+    million = englishNumber write2
+    numString = numString + million + " million "
   end
 
-  if write > 99
+  if write > 9
     write2 = write/10
     write = write - write2*10
     thousand = englishNumber write2
-    numString = numString + thousand + " thousand"
+    numString = numString + thousand + " thousand "
   end
 
   if write > 0
-    hundreds  = englishNumber write
-    numString = numString + hundreds + ' hundred'
+    write2 = write
+    write = 0
+    hundreds  = englishNumber write2
+    numString = numString + hundreds + " hundred"
      if left > 0
-      numString = numString + ' '
+      numString = numString + " "
     end
   end
 
@@ -82,5 +84,10 @@ puts englishNumber(100)
 puts englishNumber(101)
 puts englishNumber(234)
 puts englishNumber(3211)
-puts englishNumber(99999999)
+puts englishNumber(99999)
 puts englishNumber(1000000000)
+puts englishNumber(999999)
+puts englishNumber(9999999)
+puts englishNumber(99999999)
+puts englishNumber(999999999)
+puts englishNumber(9999999999)
