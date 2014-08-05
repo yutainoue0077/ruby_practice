@@ -1,4 +1,4 @@
-class Loger
+class Logger
   @@i = 0
   def log(block_name, &utigawa)
     indent = ' '
@@ -10,17 +10,17 @@ class Loger
   end
 end
 
-loger = Loger.new
+logger = Logger.new
 i = 0
 
-loger.log '外側のブロック' do
-  loger.log '内側のブロック' do
-    loger.log 'もっと内側のブロック' do
+logger.log '外側のブロック' do
+  logger.log '内側のブロック' do
+    logger.log 'もっと内側のブロック' do
       i = 'その戻り値です。'
     end
     i = 4 + 6
   end
-  loger.log '内側のお隣ブロック' do
+  logger.log '内側のお隣ブロック' do
     i += 5
   end
   i *= i
