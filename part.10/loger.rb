@@ -1,28 +1,27 @@
 class Loger
-  def log(block_name, i, &utigawa)
+  @@i = 0
+  def log(block_name, &utigawa)
     indent = ' '
-    i += 1
-    puts "#{indent * (i - 1)}\"#{block_name}\"を開始..."
-    modorichi = utigawa.call i
-    puts "#{indent * (i - 1)}...\"#{block_name}\"が終了して、戻り値は\"#{modorichi}\""
-    i -= 1
-    i
+    @@i += 1
+    puts "#{indent * (@@i - 1)}\"#{block_name}\"を開始..."
+    modorichi = utigawa.call
+    puts "#{indent * (@@i - 1)}...\"#{block_name}\"が終了して、戻り値は\"#{modorichi}\""
+    @@i -= 1
   end
 end
 
 loger = Loger.new
 i = 0
-x = 0
 
-loger.log '外側のブロック', i do |i|
-  loger.log '内側のブロック', i do |i|
-    loger.log 'もっと内側のブロック',i do |i|
-      x = 'その戻り値です。'
+loger.log '外側のブロック' do
+  loger.log '内側のブロック' do
+    loger.log 'もっと内側のブロック' do
+      i = 'その戻り値です。'
     end
-    x = 4 + 6
+    i = 4 + 6
   end
-  loger.log '内側のお隣ブロック', i do |i|
-  x += 5
+  loger.log '内側のお隣ブロック' do
+    i += 5
   end
   i *= i
 end
